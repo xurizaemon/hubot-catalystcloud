@@ -1,0 +1,26 @@
+{
+  "name": "hubot-catalystcloud",
+  "version": "0.0.1",
+  "description": "Announce Catalyst Cloud status updates to channel",
+  "main": "src/catalystcloud.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.catalyst.net.nz:chrisburgess/hubot-catalystcloud.git"
+  },
+  "keywords": [
+    "hubot",
+    "catalystcloud",
+    "openstack"
+  ],
+  "author": "Chris Burgess <chris.burgess@catalyst.net.nz>",
+  "license": "MIT",
+  "dependencies": {
+    "object-diff": "0.0.4",
+    "request-promise": "^4.2.2",
+    "xmldom": "^0.1.27",
+    "xmldom-qsa": "^1.0.3"
+  }
+}
