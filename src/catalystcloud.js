@@ -17,7 +17,7 @@ module.exports = function(robot) {
   let diff = require('object-diff')
 
   let URL = process.env.HUBOT_CATALYSTCLOUD_STATUS_URL || 'https://catalystcloud.nz/support/status/'
-  let notifyRooms = process.env.HUBOT_CATALYSTCLOUD_STATUS_NOTIFY_ROOMS || 'cloudstatus'
+  let notifyRooms = process.env.HUBOT_CATALYSTCLOUD_STATUS_NOTIFY_ROOMS || ''
   let announce = process.env.HUBOT_CATALYSTCLOUD_STATUS_ANNOUNCE
   let notifyInterval = (process.env.HUBOT_CATALYSTCLOUD_STATUS_NOTIFY_INTERVAL || 60) * 1000
   if (typeof announce === 'undefined') { announce = 1 } // Default to active
@@ -83,7 +83,7 @@ module.exports = function(robot) {
         console.log(err, 'error in hubot-catalystcloud response')
       })
   }
-  if (announce) {
+  if (notifyRooms.length && announce) {
     let monitorInterval = setInterval(monitorStatuses, notifyInterval)
   }
 
