@@ -1,6 +1,6 @@
 {
   "name": "hubot-catalystcloud",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Announce Catalyst Cloud status updates to channel",
   "main": "src/catalystcloud.js",
   "scripts": {
