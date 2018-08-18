@@ -69,7 +69,6 @@ module.exports = function(robot) {
     request(URL)
       .then((htmlString) => {
         let statuses = parseStatuses(htmlString)
-        // statuses = simulateStatuses(statuses)
         statuses = changedStatuses(statuses)
         announce = []
         for (let key of Object.keys(statuses)) {
@@ -92,7 +91,6 @@ module.exports = function(robot) {
     request(URL)
       .then((htmlString) => {
         let statuses = parseStatuses(htmlString)
-        statuses = simulateStatuses(statuses)
         reply = []
         for (let key of Object.keys(statuses)) {
           reply.push(`* ${key}: ${statuses[key]}`)
