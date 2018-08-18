@@ -2,6 +2,8 @@
 
 Catalyst Cloud functionality for Hubot
 
+Relays / fetches status page to channel. Suggestions for other functionality welcome. See also [hubot-openstack](https://github.com/willgarcia/hubot-openstack) for OpenStack functionality.
+
 ## Installation
 
 In hubot project repo, run:
