@@ -25,7 +25,7 @@ module.exports = function(robot) {
   // Extract statuses from the status page.
   // <h4>Region name</h4><p>Current status</p>
   let parseStatuses = (htmlString) => {
-    let dom = new domparser().parseFromString(htmlString)
+    let dom = new domparser({errorHandler:{warning:null}}).parseFromString(htmlString)
     let headings = dom.getElementsByTagName('h4')
     let statuses = {}
     for (var i = 0; i < headings.length; i++) {
